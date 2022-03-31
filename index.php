@@ -27,7 +27,6 @@
     					</ul>
    					</li>
 				</ul>
-				Test 123
 			</nav>
 		</div>
 	</div>

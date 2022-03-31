@@ -3,10 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="map.css">
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-		crossorigin=""/>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 		<title>Les Potes à La Compotes</title>
 	</head>
 		<body>
@@ -36,9 +35,9 @@
 									</ul>
 								</li>
 								<li class="menu-deroulant">
-									<a href="#">Les cathégories</a>
+									<a href="#">Les catégories</a>
 									<ul class="sous-menu">
-										<li><a href="inwork.html">Bac a sel</a></li>
+										<li><a href="inwork.html">Bac à sel</a></li>
 										<li><a href="inwork.html">Panneaux</a></li>
 										<li><a href="inwork.html">Carousselle</a></li>
 										<li><a href="inwork.html">Mur</a></li>
@@ -56,10 +55,10 @@
 			crossorigin="">
 			</script>
 			<script>
-				var map = L.map('map').setView([45.436368, 4.387954], 17);
-				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'})
-				.addTo(map);
+			var mymap = L.map('map').setView([45.436332, 4.387992], 20);
+			L.tileLayer('https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=QaHpZGsDnCd3GWLUks1HujWfS6sJdEiBndE4JYM0XNbD1DUTnNrGKyHahJm7ehhe', {})
+			.addTo(mymap);
+			mymap.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"_blank\">&copy; Jawg</a> - <a href=\"https://www.openstreetmap.org\" target=\"_blank\">&copy; OpenStreetMap</a>&nbsp;contributors")
 			</script>			
 		</body>
 </html>  

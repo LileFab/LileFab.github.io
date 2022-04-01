@@ -56,8 +56,11 @@
 			</script>
 			<script>
 			var mymap = L.map('map').setView([45.436332, 4.387992], 20);
+			
 			L.tileLayer('https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=QaHpZGsDnCd3GWLUks1HujWfS6sJdEiBndE4JYM0XNbD1DUTnNrGKyHahJm7ehhe', {})
 			.addTo(mymap);
+			L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {id: 'mapbox.streets', attribution: ""})
+			.addTo(mymap)
 			mymap.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"_blank\">&copy; Jawg</a> - <a href=\"https://www.openstreetmap.org\" target=\"_blank\">&copy; OpenStreetMap</a>&nbsp;contributors")
 			</script>			
 		</body>

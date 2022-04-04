@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<script src="map.js"></script>
 		<title>Les Potes à La Compotes</title>
 	</head>
 		<body>
@@ -23,7 +24,7 @@
 										<li><a href="inwork.html">BXL</a></li>
 										<li><a href="inwork.html">Grand Moulin</a></li>
 										<li><a href="inwork.html">Jaures</a></li>
-										<li><a href="inwork.html">Hotel de ville</a></li>
+										<li><a href="inwork.html">Hôtel de ville</a></li>
 									</ul>
 								</li>
 								<li class="menu-deroulant">
@@ -31,7 +32,8 @@
 									<ul class="sous-menu">
 										<li><a href="inwork.html">LileFab</a></li>
 										<li><a href="inwork.html">Robs</a></li>
-										<li><a href="inwork.html">...</a></li>
+										<li><a href="inwork.html">Thibs la racaille</a></li>
+										<li><a href="inwork.html">Pelle LPB</a></li>
 									</ul>
 								</li>
 								<li class="menu-deroulant">
@@ -41,11 +43,19 @@
 										<li><a href="inwork.html">Panneaux</a></li>
 										<li><a href="inwork.html">Carousselle</a></li>
 										<li><a href="inwork.html">Mur</a></li>
+										<li><a href="inwork.html">Tableau</a></li>
 									</ul>
 								</li>
 						</ul>
 					</nav>
-					<div id="map"></div>
+					<div class="frameCarte"></div>
+						<div id="map"></div>
+						<a href="">
+							alalalalalalalala						
+						</a>
+
+					</div>
+				
 
 				</div>
 			</div>
@@ -54,14 +64,16 @@
 			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 			crossorigin="">
 			</script>
+
 			<script>
 			var mymap = L.map('map').setView([45.436332, 4.387992], 20);
-			
+
 			L.tileLayer('https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=QaHpZGsDnCd3GWLUks1HujWfS6sJdEiBndE4JYM0XNbD1DUTnNrGKyHahJm7ehhe', {})
-			.addTo(mymap);
+				.addTo(mymap);
 			L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {id: 'mapbox.streets', attribution: ""})
-			.addTo(mymap)
+				.addTo(mymap)
 			mymap.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"_blank\">&copy; Jawg</a> - <a href=\"https://www.openstreetmap.org\" target=\"_blank\">&copy; OpenStreetMap</a>&nbsp;contributors")
-			</script>			
+	
+			</script>
 		</body>
 </html>  

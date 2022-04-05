@@ -8,25 +8,40 @@
   src: url('Gagalin-Regular.otf');
 }
 
-#band {
-background-color: #8A2BE2;
+@font-face {
+  font-family: 'jaapokki';
+  src: url('Jaapokki-Regular.otf');
 }
 
-#map {
- height: 450px; 
- width: 50%;
- margin-top: 30px;
- display: flex;
- justify-content: center;
-
+@font-face {
+  font-family: 'robotoLight';
+  src: url('Roboto-Light.ttf');
 }
 
-h1 {
-font-family: 'gagalin';
+header {
+background-color: #7B608D;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+#separateur{
+border-left: 4px solid white;
+height: 90%;
+}
+
+#droiteBandeau{
+width: 100%;
+border: white;
+}
+
+h1 a{
+font-family: 'jaapokki';
 font-size: 80px;
 color: white;
 margin-left: 30px;
 white-space: nowrap;
+text-decoration: none;
 }
 
 :root{
@@ -42,6 +57,8 @@ width: 100%;
 font-size: 18px;
 position: sticky;
 top: 0;
+z-index: 1000;
+white-space: nowrap;
 }
 
 nav > ul {
@@ -101,11 +118,11 @@ display: flex;
 }
 
 nav > ul > li:hover > a{
-color: #8A2BE2;
+color: #5D486E;
 }
 
 .sous-menu > li:hover {
-background-color: #8A2BE2;
+background-color: #5D486E;
 }
 
 .sous-menu > li:hover > a {
@@ -142,4 +159,59 @@ animation: rotationFleche 0.2s linear forwards;
 
 .menu-deroulant:hover > .sous-menu {
 animation: apparitionSousMenu 1s forwards;
+}
+
+.frameCarte{
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: auto;
+  margin-top: 30px;
+}
+#map {
+  height: 520px; 
+  width: 70vw;
+  display: block;
+ }
+
+ .droite{
+   display: flex;
+   flex-direction: column;
+
+ }
+
+ .droite img{
+  height: 470px;
+   width: auto;
+ }
+ 
+.boutonMap {
+  font-family: "quicksand", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  height: 10%;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 10px;
+}
+
+.boutonMap:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .boutonMap {
+    padding: 0.25em 0.75em;
+  }
 }

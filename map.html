@@ -7,13 +7,15 @@
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 		<script src="map.js"></script>
-		<title>Les Potes à La Compotes</title>
+		<title>Les Potes à La Compote</title>
 	</head>
 		<body>
 			<div>
-				<div id="band">
-					<h1>Les Potes à La Compotes</h1>
-				</div>
+				<header>				
+					<div><h1><a href="map.html">Potes à La Compote</a></h1></div>
+					<div id="droiteBandeau">
+					</div>
+				</header>
 				<div id="menu">
 					<nav>
 						<ul>
@@ -34,6 +36,7 @@
 										<li><a href="inwork.html">Robs</a></li>
 										<li><a href="inwork.html">Thibs la racaille</a></li>
 										<li><a href="inwork.html">Pelle LPB</a></li>
+										<li><a href="inwork.html">Youssro Pas Bo</a></li>
 									</ul>
 								</li>
 								<li class="menu-deroulant">
@@ -48,12 +51,13 @@
 								</li>
 						</ul>
 					</nav>
-					<div class="frameCarte"></div>
-						<div id="map"></div>
-						<a href="">
-							alalalalalalalala						
-						</a>
 
+					<div class="frameCarte">
+						<div id="map"></div>
+						<div class="droite">
+							<button class="boutonMap" role="button">Changer de vue de carte</button>
+							<img src="fleur.jpg" alt="fleur">
+						</div>						
 					</div>
 				
 
@@ -66,12 +70,20 @@
 			</script>
 
 			<script>
-			var mymap = L.map('map').setView([45.436332, 4.387992], 20);
+			var mymap = L.map('map').setView([45.436332, 4.387992], 18);
 
-			L.tileLayer('https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=QaHpZGsDnCd3GWLUks1HujWfS6sJdEiBndE4JYM0XNbD1DUTnNrGKyHahJm7ehhe', {})
+			L.tileLayer('https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=QaHpZGsDnCd3GWLUks1HujWfS6sJdEiBndE4JYM0XNbD1DUTnNrGKyHahJm7ehhe', 
+			{
+				maxZoom: 20,
+				minZoom: 14
+			})
 				.addTo(mymap);
-			L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {id: 'mapbox.streets', attribution: ""})
+
+			L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {id: 'mapbox.streets', attribution: "",
+			maxZoom: 19,
+			minZoom: 15})
 				.addTo(mymap)
+
 			mymap.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"_blank\">&copy; Jawg</a> - <a href=\"https://www.openstreetmap.org\" target=\"_blank\">&copy; OpenStreetMap</a>&nbsp;contributors")
 	
 			</script>
